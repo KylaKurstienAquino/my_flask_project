@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"); 
+
 input[type=text], input[type=date], input[type=int], select {
     position: relative;
     width: calc(100%/ 12*12);
@@ -16,6 +18,19 @@ input[type=text], input[type=date], input[type=int], select {
  label[for="bookinfotitle"] {
     font-size: 30px;
     margin-top: 3%;
+ }
+
+ * {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Poppins';
+ }
+
+ .main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
  .name {
@@ -132,4 +147,14 @@ input[type=text], input[type=date], input[type=int], select {
     width: calc(100%/ 12*11);
     margin-top: 3%;
     margin-left: 4%;
+ }
+ .reg {
+    position: relative;
+    background-color: blue;
+    text-align: center;
+    color: black;
+    width: calc(100% / 12 * 3);
+    margin-top: 5%;
+    margin-left: 35%;
+    font-size: 20px;
  }
