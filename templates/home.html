@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Serene Skyline Lodgings</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}" />
+  </head>
+  
+  <body>
+    <nav>
+      <div class="logo">
+        <img class="logo" src="{{url_for('static',filename='img/image 2.png')}}"/>
+      </div>
+      <div>
+        <a href="#" style="text-decoration: none">Serene Skyline Lodgings</a>
+      </div>
+      
+      <ul class="navbar" style="list-style-type: none">
+        <li class="contact nav-right">
+          <a href="" style="text-decoration: none">CONTACT US</a>
+        </li>
+        <li class="aboutus nav-right">
+          <a href="" style="text-decoration: none">ABOUT US</a>
+        </li>
+        <li class="book nav-right"><button class="book">BOOK</button></li>
+      </ul>
+</nav>
+    <header>
+        <img src="{{url_for('static',filename='img/image 2.png')}}" alt="Logo">
+        <p class="logo">Serene Skyline Lodgings</p>
+        <p class="subtitle">Elegance Elevated, Comfort Redefined</p>
+    </header>
+
+    <div class="availabilitybtn"> <button class="avail">View Our Rooms</button></div>
+       
+    <div id="AboutUs">
+      <p class="head">About Us</p>
+      <p class="sub">At Serene Skyline Lodgings, we are not only dedicated to providing exceptional hospitality but also committed to sustainability. We strive to minimize our environmental footprint through various initiatives, engage with the local community, and implement green practices throughout our operations. When you choose to stay with us, you're not just enjoying a luxurious experience, but also contributing to a greener and more responsible future. Thank you for joining us on this journey.</p>
+      <div class="SubtFirst">
+      <div class="subtopics1">
+        <h2 class="title1"> Experience Tranquility and Luxury</h2>
+        <p>Impeccable Hospitality</p>
+        <p>Thoughtfully Designed Accommodations</p>
+        <p>Delectable Dining Experience</p>
+      </div>
+      <div class="img1">
+        <img src="{{url_for('static',filename='img/image 1.png')}}" alt="img1">
+      </div>
+      </div>
+      <div class="SubtSec">
+        <div class="subtopics2">
+          <h2 class="title2"> Indulge and Unwind</h2>
+          <p>Luxurious Amenities</p>
+          <p>Relaxation and Rejuvenation</p>
+          <p>Concierge Services</p>
+        </div>
+        <div class="img2">
+          <img src="{{url_for('static',filename='img/aboutus2.png')}}" alt="img2">
+        </div>
+        </div>
+    </div>
+    <div class="ContactUs"></div>
+
+    <aside></aside>
+  </body>
+</html>

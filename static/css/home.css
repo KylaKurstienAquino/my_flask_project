@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Tangerine&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(/static/img/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav{
+    display: flex;
+    box-sizing: border-box;
+    height: 56px;
+    align-items: center;
+    background-color: rgba(8, 9, 17, 0.554);
+    padding-left: 2%;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 525px;
+    justify-content: space-between;
+}
+nav a{
+    color: white;
+    font-family: "Poppins",cursive;
+    font-weight:bold;
+}
+nav img{
+    height: 40px;
+    width: 40px;
+    padding-top: 5%;
+}
+nav button
+{
+    width: 157px;
+    height: 56px;
+    border-radius: 0;
+    background-color: darkblue;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    color: white; /* Change text color to blue when hovered */
+    text-decoration: underline; /* Add underline when hovered */
+    background-color: gold;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    color: black;
+    padding-top: 50px;
+}
+
+header img{
+    height: 150px;
+    width: 150px;
+}
+
+header p.logo{
+    font-family: "Great Vibes", cursive;
+    font-weight: bold;
+    font-size: 96px;
+    margin: 0;
+}
+
+header p.subtitle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 0;
+    font-style: italic;
+}
+
+body .availabilitybtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 200px;
+    align-self: center;
+    height: calc( 100% - 100px );
+    
+
+}
+
+.availabilitybtn button{
+    width: 361px;
+    height: 47px;
+    border-radius: 0;
+    background-color: darkblue;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+#AboutUs{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    margin-top: 20%;
+    padding-bottom: 20px;
+    color: white;
+    background-color: rgba(8, 9, 17, 0.554);
+}
+.head{
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    margin: 20px;
+}
+.sub{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    margin: 20px;
+
+}
+.SubtFirst{
+    margin-left: 5%;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+}
+.subtopics1 {
+    padding-left: 10%;
+    flex: 1; /* Adjust flex */
+    margin: 20px;
+}
+.subtopics1 h2{
+    font-family: "Great Vibes", cursive;
+    font-size: 35px;
+}
+.subtopics1 p{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+.img1{
+    flex: 1;
+    text-align: right;
+}
+.SubtFirst img{
+    width: 500px;
+    padding-right: 20%;
+}
+.SubtSec{
+    margin-left: 5%;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+}
+.subtopics2 {
+    padding-left: 10%;
+    flex: 1; /* Adjust flex */
+}
+.subtopics2 h2{
+    font-family: "Great Vibes", cursive;
+    font-size: 35px;
+}
+.subtopics2 p{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+.img2{
+    flex: 1;
+    text-align: right;
+}
+.SubtSec img{
+    width: 500px;
+    padding-right: 20%;
+}
