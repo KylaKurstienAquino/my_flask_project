@@ -1,0 +1,135 @@
+input[type=text], input[type=date], input[type=int], select {
+    position: relative;
+    width: calc(100%/ 12*12);
+    padding: 0.5%;
+    margin: 1%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  label {
+    display: block;
+  }
+
+ label[for="bookinfotitle"] {
+    font-size: 30px;
+    margin-top: 3%;
+ }
+
+ .name {
+    display: flex;
+    margin-left: 5%;
+ }
+
+ .namefirst {
+    position: relative;
+    width: calc(100%/ 12*5);
+ }
+ .namelast {
+    float: right;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 2%;
+    width: calc(100%/ 12*5);
+ }
+
+ .mailnum {
+    display: flex;
+    margin-left: 5%;
+ }
+
+ .emails {
+    position: relative;
+    width: calc(100%/ 12*5);
+    margin-top: 3%;
+ }
+
+ .phonenumber {
+    float: right;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: calc(100%/ 12*5);
+ }
+
+ .third {
+    display: flex;
+    margin-left: 5%;
+ }
+
+ .streetadd {
+    position: relative;
+    width: calc(100%/ 12*11);
+    margin-top: 3%;
+    margin-left: 4%;
+ }
+ 
+ .citystate {
+    display: flex;
+    margin-left: 5%;
+ }
+
+ .cy {
+    position: relative;
+    width: calc(100%/ 12*5);
+    margin-top: 3%;
+ }
+
+ .sta {
+    float: right;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: calc(100%/ 12*5);
+ }
+ .postalcode {
+    position: relative;
+    width: calc(100%/ 12*11);
+    margin-top: 3%;
+    margin-left: 4%;
+ }
+
+.calendar {
+    display: flex;
+    margin-left: 5%;
+}
+.cid {
+    position: relative;
+    width: calc(100%/ 12*5);
+    margin-top: 2%;
+}
+.cod {
+    float: right;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 2%;
+    width: calc(100%/ 12*5);
+}
+
+.roomandnum {
+    display: flex;
+    margin-left: 5%;
+ }
+
+ .rooms {
+    position: relative;
+    width: calc(100%/ 12*5);
+    margin-top: 3%;
+ }
+
+ .numberguest {
+    float: right;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: calc(100%/ 12*5);
+ }
+
+ .not {
+    position: relative;
+    width: calc(100%/ 12*11);
+    margin-top: 3%;
+    margin-left: 4%;
+ }
