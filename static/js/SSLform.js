@@ -1,3 +1,19 @@
+const fullform = document.body;
+    const main = document.getElementById('main');
+
+    function openBook() {
+        main.style.display = 'flex';
+        fullform.classList.add('modal-open');
+    }
+
+    function closeBook() {
+        main.style.display = 'none';
+        fullform.classList.remove('modal-open');
+    }
+
+    document.querySelector('.book').addEventListener('click', openBook);
+
+
 function updateCheckoutDate() {
     var checkinDate = new Date(document.getElementById('cndcalendar').value);
     var checkoutInput = document.getElementById('codcalendar');
@@ -76,3 +92,4 @@ function calculateTotalPrice() {
 document.getElementById('roomt').addEventListener('change', calculateTotalPrice);
 document.getElementById('cndcalendar').addEventListener('change', calculateTotalPrice);
 document.getElementById('codcalendar').addEventListener('change', calculateTotalPrice);
+
