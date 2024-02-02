@@ -23,20 +23,6 @@ def submit_form():
         num_guests = request.form['numguest']
         notes = request.form['numguest']
 
-        print("First Name:", first_name)
-        print("Last Name:", last_name)
-        print("Email:", email)
-        print("Phone Number:", phone_number)
-        print("Address:", address)
-        print("City:", city)
-        print("State:", state)
-        print("Postal Code:", postal_code)
-        print("Check-in Date:", check_in_date)
-        print("Check-out Date:", check_out_date)
-        print("Room Type:", room_type)
-        print("Number of Guests:", num_guests)
-        print("Notes:", notes)
-
         return 'Form submitted successfully'
 
 if __name__ == '__main__':
