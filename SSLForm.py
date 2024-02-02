@@ -1,49 +1,47 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('SSLForm.html')
+def index():
+    return render_template('SSLform.html')
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-@app.route('/submit', methods=['POST'])
-def submit():
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
     if request.method == 'POST':
-        first_name = request.form['first_name']
-        last_name = request.form['last_name']
-        email = request.form['email']
-        phone_number = request.form['phone_number']
-        street_address = request.form['street_address']
-        city = request.form['city']
-        province = request.form['province']
-        postal_code = request.form['postal_code']
-        check_in_date = request.form['check_in_date']
-        check_out_date = request.form['check_out_date']
-        room_type = request.form['room_type']
-        num_guests = request.form['num_guests']
-        optional_notes = request.form['optional_notes']
+        # Fetching form data
+        first_name = request.form['fnames']
+        last_name = request.form['lnames']
+        email = request.form['mailes']
+        phone_number = request.form['numbers']
+        address = request.form['addre']
+        city = request.form['cits']
+        state = request.form['stats']
+        postal_code = request.form['postals']
+        check_in_date = request.form['cndcalendar']
+        check_out_date = request.form['codcalendar']
+        room_type = request.form['room']
+        num_guests = request.form['numguest']
+        notes = request.form['numguest']
 
-        # Here you can process the form data as per your requirements
+        # Process the form data as required
+        
+        # For now, just printing the data to console
+        print("First Name:", first_name)
+        print("Last Name:", last_name)
+        print("Email:", email)
+        print("Phone Number:", phone_number)
+        print("Address:", address)
+        print("City:", city)
+        print("State:", state)
+        print("Postal Code:", postal_code)
+        print("Check-in Date:", check_in_date)
+        print("Check-out Date:", check_out_date)
+        print("Room Type:", room_type)
+        print("Number of Guests:", num_guests)
+        print("Notes:", notes)
 
-        return render_template('success.html', 
-                               first_name=first_name, 
-                               last_name=last_name, 
-                               email=email,
-                               phone_number=phone_number,
-                               street_address=street_address,
-                               city=city,
-                               province=province,
-                               postal_code=postal_code,
-                               check_in_date=check_in_date,
-                               check_out_date=check_out_date,
-                               room_type=room_type,
-                               num_guests=num_guests,
-                               optional_notes=optional_notes)
-    return 'Something went wrong!'
+        return 'Form submitted successfully'
 
 if __name__ == '__main__':
     app.run(debug=True)
