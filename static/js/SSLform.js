@@ -5,13 +5,13 @@ function updateCheckoutDate() {
     checkoutInput.value = formatDate(checkinDate); 
 
     if (checkoutDate < checkinDate) {
-        alert('Error: Check-out date cannot be earlier than check-in date');
-        checkoutInput.value = formatDate(checkinDate); // Reset check-out date
+        alert('Error: Invalid Check-Out Date');
+        checkoutInput.value = formatDate(checkinDate);
         return;
     }
 
     checkoutInput.min = formatDate(checkinDate);
-    checkoutInput.value = formatDate(checkinDate); // Automatically set checkout date to checkin date
+    checkoutInput.value = formatDate(checkinDate);
 
 }
 
@@ -41,3 +41,38 @@ function formatDate(date) {
     var day = ('0' + date.getDate()).slice(-2);
     return year + '-' + month + '-' + day;
 }
+
+
+function calculateTotalPrice() {
+    var roomPrice = 0;
+    var totalPrice = 0;
+
+    switch(roomSelect.value) {
+        case 'room1':
+            roomPrice = 350; 
+            break;
+        case 'room2':
+            roomPrice = 300;
+            break;
+        case 'room3':
+            roomPrice = 400;
+            break;
+        default:
+            roomPrice = 0;
+            break;
+    }
+
+    var checkinDate = new Date(document.getElementById('cndcalendar').value);
+    var checkoutDate = new Date(document.getElementById('codcalendar').value);
+
+    var oneDay = 24 * 60 * 60 * 1000;
+    var nights = Math.round(Math.abs((checkinDate - checkoutDate) / oneDay));
+
+    totalPrice = roomPrice * nights;
+
+    document.getElementById('totalPrice').innerHTML = 'Total Price: $' + totalPrice;
+}
+
+document.getElementById('roomt').addEventListener('change', calculateTotalPrice);
+document.getElementById('cndcalendar').addEventListener('change', calculateTotalPrice);
+document.getElementById('codcalendar').addEventListener('change', calculateTotalPrice);

@@ -15,12 +15,12 @@
             
                 <div class="namefirst">
                     <label for="finame">NAME </label>
-                        <input type="text" name="fnames" id="fname" placeholder="FIRST NAME"> 
+                        <input type="text" name="fnames" id="fname" placeholder="FIRST NAME" required> 
                         <label for="first name"> First Name </label>
                 </div>
                 
                 <div class="namelast">
-                        <input type="text" name="lnames" id="lname" placeholder="LAST NAME"> 
+                        <input type="text" name="lnames" id="lname" placeholder="LAST NAME" required> 
                         <label for="last name"> Last Name </label>
                 </div>
             </div>
@@ -29,13 +29,13 @@
 
                 <div class="emails">
                     <label for="mail">EMAIL </label> 
-                    <input type="text" name="mailes" id="maile"> 
+                    <input type="text" name="mailes" id="maile" required> 
                     <label for="Email"> example@example.com </label>
                 </div>
                 
                 <div class="phonenumber">
                     <label for="pnum">PHONE NUMBER </label>
-                    <input type="int" name="numbers" id="number">
+                    <input type="int" name="numbers" id="number" required>
                     <label for="Phone Num"> Please enter a valid phone number </label>
                 </div>
             
@@ -43,7 +43,7 @@
 
             <div class="streetadd">
                     <label for="adre">ADDRESS </label>
-                    <input type="text" name="addre" id="addres" placeholder="STREET ADDRESS">
+                    <input type="text" name="addre" id="addres" placeholder="STREET ADDRESS"> 
                     <label for="stradd"> Street Address </label>
             </div>
             
@@ -74,12 +74,12 @@
                     
                     <div class="cid">
                         <label class="cida">CHECK-IN DATE</label>
-                        <input type="date" id="cndcalendar" name="cndcalendar">
+                        <input type="date" id="cndcalendar" name="cndcalendar" required>
                     </div>
             
                     <div class="cod">
                         <label class="coda">CHECK-OUT DATE</label>
-                        <input type="date" id="codcalendar" name="codcalendar">
+                        <input type="date" id="codcalendar" name="codcalendar" required>
                     </div>
 
                 </div>
@@ -113,5 +113,6 @@
         </form>
     </div>
 </body>
-<script src="/js/SSLform.js"> </script>
+<script src="/static/js/SSLForm.js"> </script>
 </html>
+
