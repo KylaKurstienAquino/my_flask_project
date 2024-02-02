@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("images/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    box-sizing: border-box;
+    height: 56px;
+    align-items: center;
+    padding-left: 2%;
+    font-size: 20px;
+}
+nav a{
+    color: black;
+    font-family: "Great Vibes",cursive;
+    font-weight:bold;
+}
+nav img{
+    height: 40px;
+    width: 40px;
+    padding-top: 5%;
+}
+nav p.OurRooms{
+    font-family: Poppins;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 1%;
+    padding-left: 25%;
+
+}
+
+.box-container {
+    margin-top: 20px;
+    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    width: 1100px;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(8, 9, 17, 0.554);
+    overflow: hidden;
+}
+
+.textboxes {
+    float: right;
+    width: 70%;
+    padding-bottom: 20px;
+
+}
+.roomname {
+    font-family: 'Meow Script', cursive;
+    font-size: 64px;
+    text-align: center;
+    color: white;
+}
+.desc {
+    font-family: 'Poppins', cursive;
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    padding-top: 0%;
+}
+img.room1{
+    padding-top: 0%;
+    padding-top: 5%;
+    padding-left: 5%;
+    height: 500px;
+    width: 550px;
+}
+.price{
+    float:none;
+    Width: 350px;
+    Height: 50px;
+    background-color: gold;
+    margin-left: 13%;
+    
+}
+.price1{
+text-align: center;
+font-size: 32px;
+padding-top: 1%;
+}
+.arrows{
+    position: relative;
+}
+.arrow {
+    position: absolute;
+    font-size: 50px;
+    padding: 70px;
+    margin-top: 20%;
+    cursor: pointer;
+    z-index: 999; /* Ensure arrows appear above other elements */
+}
+
+.left {
+    left: 0;
+    color: black;
+}
+
+.right {
+    right: 0;
+    color: black;
+}
