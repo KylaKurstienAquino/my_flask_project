@@ -3,6 +3,16 @@ function updateCheckoutDate() {
     var checkoutInput = document.getElementById('codcalendar');
     checkoutInput.min = formatDate(checkinDate);
     checkoutInput.value = formatDate(checkinDate); 
+
+    if (checkoutDate < checkinDate) {
+        alert('Error: Check-out date cannot be earlier than check-in date');
+        checkoutInput.value = formatDate(checkinDate); // Reset check-out date
+        return;
+    }
+
+    checkoutInput.min = formatDate(checkinDate);
+    checkoutInput.value = formatDate(checkinDate); // Automatically set checkout date to checkin date
+
 }
 
 function updateRoomAvailability() {

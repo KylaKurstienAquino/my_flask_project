@@ -17,15 +17,15 @@ $notes = $_POST['notes'];
 $DBHost = "localhost"; 
 $DBUser = "root"; 
 $DBPass = ""; 
-$DBName = "database_employee"; 
+$DBName = "serene_skyline"; 
 
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = mysqli_connect($DBHost, $DBUser, $DBPass,$DBName);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO your_table (fname, lname, email, phone, address, city, state, postal, checkin, checkout, room, guests, notes)
+$sql = "INSERT INTO sereneform (fname, lname, email, phone, address, city, state, postal, checkin, checkout, room, guests, notes)
         VALUES ('$fname', '$lname', '$email', '$phone', '$address', '$city', '$state', '$postal', '$checkin', '$checkout', '$room', '$guests', '$notes')";
 
 if ($conn->query($sql) === TRUE) {
