@@ -273,16 +273,25 @@ input[type=text], input[type=date], input[type=int], select {
  }
 
  .main {
-    display: none;
-    position: absolute;
-    width: calc(100% / 12 * 7);
-    justify-content: center;
-    align-items: center;
-    margin-left: 20%;
+    display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
  }
  .bookform2 {
     width: calc(100%/ 12 * 12);
     background-color: white;
+    margin: 10% auto; /* Center the modal vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Adjust the width as needed */
+    max-width: 600px;
+
  }
 
  .form2 {
@@ -291,17 +300,15 @@ input[type=text], input[type=date], input[type=int], select {
 
 .closebtn {
     color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: relative;
-    float: right;
-    cursor: pointer;
-    margin-right: 4%;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .closebtn:hover {
     color: blue;
     text-decoration: none;
+    cursor: pointer;
 }
 
  .name {

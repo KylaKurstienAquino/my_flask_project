@@ -1,17 +1,18 @@
-const fullform = document.body;
-    const main = document.getElementById('main');
+const main = document.getElementById('mainmodal');
+const closebtn = document.querySelector('.closebtn');
+const openbtn = document.getElementById('openbtn');
 
-    function openBook() {
-        main.style.display = 'flex';
-        fullform.classList.add('main-open');
-    }
+function openform() {
+    main.style.display = 'flex';
+}
+function closeform() {
+    main.style.display = 'none';
+}
 
-    function closeBook() {
-        main.style.display = 'none';
-        fullform.classList.remove('main-open');
-    }
+openbtn.addEventListener('click', openform);
 
-    document.querySelector('.book').addEventListener('click', openBook);
+closebtn.addEventListener('click', closeform);
+
 
 
 function updateCheckoutDate() {
