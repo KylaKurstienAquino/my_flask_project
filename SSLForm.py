@@ -9,7 +9,6 @@ def index():
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     if request.method == 'POST':
-        # Fetching form data
         first_name = request.form['fnames']
         last_name = request.form['lnames']
         email = request.form['mailes']
@@ -24,9 +23,6 @@ def submit_form():
         num_guests = request.form['numguest']
         notes = request.form['numguest']
 
-        # Process the form data as required
-        
-        # For now, just printing the data to console
         print("First Name:", first_name)
         print("Last Name:", last_name)
         print("Email:", email)
