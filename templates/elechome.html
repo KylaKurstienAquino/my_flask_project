@@ -65,114 +65,117 @@
 
     <div class="main" id="bookform">
       <div class="bookform2">
-        <div class="closebtn" onclick="closebook()">&times;</div>
-	        <div class="fullformpic"><img src="/static/img/wdf.png" alt="formpic" width="100%" height="70%"></div>
+        <span class="closebtn" onclick="closebook()">&times;</span>
+	        <div class="fullformpic"><img src="/static/img/wdf.png" alt="formpic" width="100%" height="80%"></div>
 
-            <form name="sslf" method="POST"  style="width:75%; height:10  0vh;">
-              <div class="name">
+            <form name="sslf" method="POST"  style="width:100%; height:135vh;">
+              <div class="form2">
+                <div class="name">
       
-                <div class="namefirst">
-                  <label for="finame">NAME </label>
-                  <input type="text" name="fnames" id="fname" placeholder="FIRST NAME" required> 
-                  <label for="first name"> First Name </label>
+                  <div class="namefirst">
+                    <label for="finame">NAME </label>
+                    <input type="text" name="fnames" id="fname" placeholder="FIRST NAME" required> 
+                    <label for="first name"> First Name </label>
+                  </div>
+  
+                  <div class="namelast">
+                    <input type="text" name="lnames" id="lname" placeholder="LAST NAME" required> 
+                    <label for="last name"> Last Name </label>
+                  </div>
+  
                 </div>
-
-                <div class="namelast">
-                  <input type="text" name="lnames" id="lname" placeholder="LAST NAME" required> 
-                  <label for="last name"> Last Name </label>
-                </div>
-
-              </div>
-        
-                  <div class="mailnum">
-                  
-                    <div class="emails">
-                      <label for="mail">EMAIL </label> 
-                      <input type="text" name="mailes" id="maile" required> 
-                      <label for="Email"> example@example.com </label>
-                    </div>
-                  
-                    <div class="phonenumber">
-                      <label for="pnum">PHONE NUMBER </label>
-                      <input type="int" name="numbers" id="number" required>
-                      <label for="Phone Num"> Please enter a valid phone number </label>
-                    </div>
-                  
-                  </div>
-                
-                  <div class="streetadd">
-                      <label for="adre">ADDRESS </label>
-                      <input type="text" name="addre" id="addres" placeholder="STREET ADDRESS"> 
-                      <label for="stradd"> Street Address </label>
-                  </div>
-                
-                    <div class="citystate">
+          
+                    <div class="mailnum">
                     
-                          <div class="cy">
-                              <input type="text" name="cits" id="cit" placeholder="CITY"> 
-                              <label for="city"> City </label>
-                          </div>
-                        
-                          <div class="sta">
-                              <input type="text" name="stats" id="stat" placeholder="STATE/PROVINCE"> 
-                              <label for="stapro"> State/Province </label>
-                          </div>
-                        
-                    </div>
-                  
-                  <div class="postalcode">
-                          <input type="int" name="postals" id="posta" placeholder="POSTAL CODE"> 
-                          <label for="Postal"> Postal Code </label>
-                  </div>
-                
-                
-                  <div class="bookinfo">
-                    <label for="bookinfotitle">BOOKING INFORMATION</label>
-                  
-                    <div class="calendar">
-                    
-                      <div class="cid">
-                          <label class="cida">CHECK-IN DATE</label>
-                          <input type="date" id="cndcalendar" name="cndcalendar" required>
+                      <div class="emails">
+                        <label for="mail">EMAIL </label> 
+                        <input type="text" name="mailes" id="maile" required> 
+                        <label for="Email"> example@example.com </label>
                       </div>
                     
-                      <div class="cod">
-                          <label class="coda">CHECK-OUT DATE</label>
-                          <input type="date" id="codcalendar" name="codcalendar" required>
+                      <div class="phonenumber">
+                        <label for="pnum">PHONE NUMBER </label>
+                        <input type="int" name="numbers" id="number" required>
+                        <label for="Phone Num"> Please enter a valid phone number </label>
                       </div>
                     
                     </div>
                   
-                    <div class="roomandnum">
+                    <div class="streetadd">
+                        <label for="adre">ADDRESS </label>
+                        <input type="text" name="addre" id="addres" placeholder="STREET ADDRESS"> 
+                        <label for="stradd"> Street Address </label>
+                    </div>
+                  
+                      <div class="citystate">
+                      
+                            <div class="cy">
+                                <input type="text" name="cits" id="cit" placeholder="CITY"> 
+                                <label for="city"> City </label>
+                            </div>
+                          
+                            <div class="sta">
+                                <input type="text" name="stats" id="stat" placeholder="STATE/PROVINCE"> 
+                                <label for="stapro"> State/Province </label>
+                            </div>
+                          
+                      </div>
                     
-                        <div class="rooms">
-                          <label class="roomtype">ROOM TYPE</label>
-                            <select name="room" id="roomt">
-                              <option value="value 0"></option>
-                              <option value="room1">Luxury Suite Oasis</option>
-                              <option value="room2">On Skyview Retreat</option>
-                              <option value="room3">Romantic Hideaway</option>
-                            </select>
+                    <div class="postalcode">
+                            <input type="int" name="postals" id="posta" placeholder="POSTAL CODE"> 
+                            <label for="Postal"> Postal Code </label>
+                    </div>
+                  
+                  
+                    <div class="bookinfo">
+                      <label for="bookinfotitle">BOOKING INFORMATION</label>
+                    
+                      <div class="calendar">
+                      
+                        <div class="cid">
+                            <label class="cida">CHECK-IN DATE</label>
+                            <input type="date" id="cndcalendar" name="cndcalendar" required>
                         </div>
                       
-                        <div class="numberguest">
-                          <label class="numg"># OF GUESTS</label>
-                          <input type="text" id="numguests" name="numguest">
+                        <div class="cod">
+                            <label class="coda">CHECK-OUT DATE</label>
+                            <input type="date" id="codcalendar" name="codcalendar" required>
+                        </div>
+                      
+                      </div>
+                    
+                      <div class="roomandnum">
+                      
+                          <div class="rooms">
+                            <label class="roomtype">ROOM TYPE</label>
+                              <select name="room" id="roomt">
+                                <option value="value 0"></option>
+                                <option value="room1">Luxury Suite Oasis</option>
+                                <option value="room2">On Skyview Retreat</option>
+                                <option value="room3">Romantic Hideaway</option>
+                              </select>
                           </div>
+                        
+                          <div class="numberguest">
+                            <label class="numg"># OF GUESTS</label>
+                            <input type="text" id="numguests" name="numguest">
+                            </div>
+                      </div>
+                    
+                      <div class="not">
+                        <label class="coda">NOTES</label>
+                        <input type="text" id="numguests" name="numguest">
+                      </div>
                     </div>
                   
-                    <div class="not">
-                      <label class="coda">NOTES</label>
-                      <input type="text" id="numguests" name="numguest">
-                    </div>
-                  </div>
-                
-                  <button class="reg">Register</button>
-                
+                    <button class="reg">Register</button>
+                  
+              </div>
+              
             </form>
       </div>
     </div>       
-    <script src="/static/js/SSLform.js"></script>
+    <script src="\static\js\SSLform.js"></script>
 
     <footer>
       <div class="footer-content">

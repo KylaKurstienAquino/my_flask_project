@@ -3,12 +3,12 @@ const fullform = document.body;
 
     function openBook() {
         main.style.display = 'flex';
-        fullform.classList.add('modal-open');
+        fullform.classList.add('main-open');
     }
 
     function closeBook() {
         main.style.display = 'none';
-        fullform.classList.remove('modal-open');
+        fullform.classList.remove('main-open');
     }
 
     document.querySelector('.book').addEventListener('click', openBook);
