@@ -1,9 +1,9 @@
-const main = document.getElementById('mainmodal');
-const closebtn = document.querySelector('.closebtn');
+const main = document.getElementByClass('.main');
+const closebtn = document.getElementByClass('.closebtn');
 const openbtn = document.getElementById('openbtn');
 
 function openform() {
-    main.style.display = 'block';
+    main.style.display = 'flex';
 }
 function closeform() {
     main.style.display = 'none';
