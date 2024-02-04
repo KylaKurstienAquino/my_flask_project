@@ -1,4 +1,3 @@
-
 const bookform = document.getElementById('bookform');
 const closebtn = document.getElementById('closebtn');
 const regbtn = document.getElementById('regbtn');
@@ -8,9 +7,6 @@ function openform() {
 }
 function closeform() {
     bookform.style.display = 'none';
-}
-function keepFormOpen(event) {
-    event.stopPropagation(); // Prevent the click event from bubbling up to the form
 }
 
 bookform.addEventListener('click', openform);  
