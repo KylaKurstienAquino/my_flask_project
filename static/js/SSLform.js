@@ -1,18 +1,17 @@
-const body = document.body;
+
 const bookform = document.getElementById('bookform');
 const closebtn = document.getElementById('closebtn');
 const regbtn = document.getElementById('regbtn');
 
 function openform() {
     bookform.style.display = 'flex';
-    body.classList.add('modal-open');
 }
 function closeform() {
     bookform.style.display = 'none';
-    body.classList.remove('modal-open');
 }
 
-bookform.addEventListener('click', openform);
+bookform.addEventListener('click', openform);  
+bookform.addEventListener('click', closeform);  
 
 
 
