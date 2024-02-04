@@ -88,3 +88,15 @@ nav p.OurRooms{
   transform: translateX(-50%);
   background-color: white;
 }
+.viewbtn {
+    color: black;
+    border-color: blue;
+}
+
+.viewbtn:hover {
+    background-color: gold;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
