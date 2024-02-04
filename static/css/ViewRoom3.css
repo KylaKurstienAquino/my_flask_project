@@ -94,24 +94,3 @@ text-align: center;
 font-size: 32px;
 padding-top: 1%;
 }
-.arrows{
-    position: relative;
-}
-.arrow {
-    position: absolute;
-    font-size: 50px;
-    padding: 70px;
-    margin-top: 20%;
-    cursor: pointer;
-    z-index: 999; /* Ensure arrows appear above other elements */
-}
-
-.left {
-    left: 0;
-    color: black;
-}
-
-.right {
-    right: 0;
-    color: black;
-}
