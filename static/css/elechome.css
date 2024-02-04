@@ -299,14 +299,14 @@ input[type=text], input[type=date], input[type=int], select {
     margin-left: 5%;
  }
 
-.closebtn {
+.close {
     color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.closebtn:hover {
+.close:hover {
     color: blue;
     text-decoration: none;
     cursor: pointer;
