@@ -1,18 +1,39 @@
 from flask import Flask, render_template, request
-from flask_mysqldb import MySQL
+import mysql.connector
+from flask_mail import Mail
+from flask_mail import Message
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'serene_skyline'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'kylakurstienaquino@gmail.com'
+app.config['MAIL_PASSWORD'] = 'fiaq ebpy wyos aqdv'
+app.config['MAIL_DEFAULT_SENDER'] = 'kylakurstienaquino@gmail.com'
 
-mysql = MySQL(app)
+mail = Mail(app)
+
+
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = ''
+app.config['MYSQL_DATABASE_DB'] = 'serene_skyline'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
+db_connection = mysql.connector.connect(
+    host=app.config['MYSQL_DATABASE_HOST'],
+    user=app.config['MYSQL_DATABASE_USER'],
+    password=app.config['MYSQL_DATABASE_PASSWORD'],
+    database=app.config['MYSQL_DATABASE_DB']
+)
+
+# Create a cursor to interact with the database
+cursor = db_connection.cursor(dictionary=True)
+
 
 @app.route('/')
 def index():
-    return render_template('SSLform.html')
+    return render_template('elechome.html')
 
 @app.route('/sslform', methods=['GET','POST'])
 def sslform():
@@ -29,18 +50,17 @@ def sslform():
         check_out_date = request.form['codcalendar']
         room_type = request.form['room']
         num_guests = request.form['numguest']
-        notes = request.form['numguest']
+        notes = request.form['nots']
 
-        try:
-            cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO your_table (first_name, last_name, email, phone_number, address, city, state, postal_code, check_in_date, check_out_date, room_type, num_guests, notes) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (first_name, last_name, email, phone_number, address, city, state, postal_code, check_in_date, check_out_date, room_type, num_guests, notes))
-            mysql.connection.commit()
-            cur.close()
-            return 'Form submitted successfully'
-        except Exception as e:
-            return f"An error occurred: {str(e)}"
+        cursor.execute("INSERT INTO sereneform (fname, lname, email, phone, address, city, state, postal, checkin, checkout, room, guests, notes) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (first_name, last_name, email, phone_number, address, city, state, postal_code, check_in_date, check_out_date, room_type, num_guests, notes))
         
+        msg_Feedback = Message('Thank you for your booking', recipients=[email])
+        msg_Feedback.body = f"Dear {first_name},\n\n thank you for booking"
+        mail.send(msg_Feedback)
+
+        db_connection.commit()
+
+
         return render_template('elechome.html')
     
 if __name__ == '__main__':
