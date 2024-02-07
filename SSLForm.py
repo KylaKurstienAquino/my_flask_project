@@ -107,6 +107,7 @@ def sslform():
             first_name = request.form['fnames']
             last_name = request.form['lnames']
             email = request.form['mailes']
+            
             phone_number = request.form['numbers']
             address = request.form['addre']
             city = request.form['cits']

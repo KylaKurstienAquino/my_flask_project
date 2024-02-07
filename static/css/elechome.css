@@ -38,7 +38,7 @@ nav ul{
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    width: 525px;
+    width: 50%;
     justify-content: space-between;
 }
 nav a{

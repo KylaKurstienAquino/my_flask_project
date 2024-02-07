@@ -7,7 +7,7 @@ function openform() {
 }
 
 function closeform() {
-    bookform.style.display = 'none';
+    bookform.style.display = 'block';
 }
 
 bookform.addEventListener('click', openform);
