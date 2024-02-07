@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US Form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contact.css')}}">
+</head>
+
+<body>
+    <div class="main">
+        <form name="contactf" method="POST" style="width:75%;height:auto;">
+            <img src="{{url_for('static',filename='img/wdf.png')}}" style="width:100%">
+
+            <h1>CONTACT US</h1>
+
+            <div class="name">
+                <label for="fname">NAME </label>
+                <input type="text" name="fnames" id="fname" placeholder="FULL NAME" required>
+            </div>
+
+
+            <div class="emails">
+                <label for="mail">EMAIL </label>
+                <input type="text" name="mails" id="maile" placeholder="example@example.com" required>
+            </div>
+
+
+
+            <div class="note">
+                <label class="coda">Message</label>
+                <input type="text" name="notes" id="note" placeholder="Place your concerns here" required>
+            </div>
+
+            <button type="submit" class="reg">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
