@@ -1,3 +1,4 @@
+const body = document.body;
 const bookform = document.getElementById('bookform');
 const closebtn = document.getElementById('closebtn');
 const regbtn = document.getElementById('regbtn');

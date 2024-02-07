@@ -4,6 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
+* {
+    ::-webkit-scrollbar{
+        width: 20px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px gold; 
+        border-radius: 10px;
+        background-color: silver;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: gold; 
+        border-radius: 10px;
+      }
+
+}
+
 body {
     margin: 0;
     padding: 0;
