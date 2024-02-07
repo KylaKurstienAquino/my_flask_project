@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check out</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <th>email</th>
+                <th>check in</th>
+                <th>check out</th>
+                <th>room</th>
+                <th>action</th>
+            </thead>
+            <tbody>
+                {% for checkout in checkouts %}
+                <tr>
+                    <td>{{ checkout.email }}</td>
+                    <td>{{ checkout.checkin }}</td>
+                    <td>{{ checkout.checkout }}</td>
+                    <td>{{ checkout.room }}</td>
+                    <td>
+                        <form action="{{ url_for('delete') }}" method="POST">
+                            <input type="hidden" name="emailDelete" value="{{ checkout.email }}">
+                            <input type="hidden" name="checkinDelete" value="{{ checkout.checkin }}">
+                            <input type="hidden" name="checkoutDelete" value="{{ checkout.checkout }}">
+                            <input type="hidden" name="roomDelete" value="{{ checkout.room }}">
+                            <button type="submit">Delete</button>
+                        </form>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
