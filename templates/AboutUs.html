@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static/css/AboutUs.css">
+</head>
+<body>
+        <div class="top">
+            <nav>
+                <ul class="navbar" style="list-style-type: none">
+                    
+                  <li class="home nav-right">
+                    <a href="{{url_for('home')}}" style="text-decoration: none;">HOME</a>
+                  </li>
+                  <li class="contact nav-right">
+                    <a href="{{url_for('contact')}}" style="text-decoration: none">CONTACT US</a>
+                  </li>
+                  <li class="aboutus nav-right">
+                    <a href="{{url_for('AboutUs')}}" style="text-decoration: none">ABOUT US</a>
+                  </li>
+                  <li class="checkout nav-right">
+                    <a href="{{url_for('checkout')}}" style="text-decoration:none">CHECK OUT</a></li>
+                  <li class="book nav-right"><button id="openbtn" onclick="openform()" >BOOK</button></li>
+                </ul>
+              </nav>
+            <p class="head">About Us</p>
+            <p class="sec">Come rest with us</p>
+        </div>
+    <div class="AboutUs">
+        <p class="sub">At Serene Skyline Lodgings, we are not only dedicated to providing exceptional hospitality but also committed to sustainability. We strive to minimize our environmental footprint through various initiatives, engage with the local community, and implement green practices throughout our operations. When you choose to stay with us, you're not just enjoying a luxurious experience, but also contributing to a greener and more responsible future. Thank you for joining us on this journey.</p>
+        <div class="SubtFirst">
+        <div class="subtopics1">
+          <h2 class="title1"> Experience Tranquility and Luxury</h2>
+          <p>Impeccable Hospitality</p>
+          <p>Thoughtfully Designed Accommodations</p>
+          <p>Delectable Dining Experience</p>
+        </div>
+        <div class="img1">
+          <img id ="about1" src="/static/img/aboutus1.jpg" alt="img1">
+        </div>
+        </div>
+        <div class="SubtSec">
+          <div class="subtopics2">
+            <h2 class="title2"> Indulge and Unwind</h2>
+            <p>Luxurious Amenities</p>
+            <p>Relaxation and Rejuvenation</p>
+            <p>Concierge Services</p>
+          </div>
+          <div class="img2">
+            <img id ="about2" src="/static/img/aboutus2.png" alt="img2">
+          </div>
+          </div>
+      </div>
+      <div class="main" id="bookform">
+        <div class="bookform2">
+          <div class="formmain">
+            <div class="close" onclick="closeform()">&times;</div>
+              <div class="fullformpic"><img src="/static/img/wdf.png" alt="formpic" width="100%" height="80%"></div>
+              <form name="sslf" method="POST" action="/sslform"  style="width:100%; height:135vh;">
+                <div class="form2">
+                  <div class="name">
+        
+                    <div class="namefirst">
+                      <label for="finame">NAME </label>
+                      <input type="text" name="fnames" id="fname" placeholder="FIRST NAME" required> 
+                      <label for="first name"> First Name </label>
+                    </div>
+    
+                    <div class="namelast">
+                      <input type="text" name="lnames" id="lname" placeholder="LAST NAME" required> 
+                      <label for="last name"> Last Name </label>
+                    </div>
+    
+                  </div>
+            
+                      <div class="mailnum">
+                      
+                        <div class="emails">
+                          <label for="mail">EMAIL </label> 
+                          <input type="text" name="mailes" id="maile" required> 
+                          <label for="Email"> example@example.com </label>
+                        </div>
+                      
+                        <div class="phonenumber">
+                          <label for="pnum">PHONE NUMBER </label>
+                          <input type="int" name="numbers" id="number" required>
+                          <label for="Phone Num"> Please enter a valid phone number </label>
+                        </div>
+                      
+                      </div>
+                    
+                      <div class="streetadd">
+                          <label for="adre">ADDRESS </label>
+                          <input type="text" name="addre" id="addres" placeholder="STREET ADDRESS"> 
+                          <label for="stradd"> Street Address </label>
+                      </div>
+                    
+                        <div class="citystate">
+                        
+                              <div class="cy">
+                                  <input type="text" name="cits" id="cit" placeholder="CITY"> 
+                                  <label for="city"> City </label>
+                              </div>
+                            
+                              <div class="sta">
+                                  <input type="text" name="stats" id="stat" placeholder="STATE/PROVINCE"> 
+                                  <label for="stapro"> State/Province </label>
+                              </div>
+                            
+                        </div>
+                      
+                      <div class="postalcode">
+                              <input type="int" name="postals" id="posta" placeholder="POSTAL CODE"> 
+                              <label for="Postal"> Postal Code </label>
+                      </div>
+                    
+                    
+                      <div class="bookinfo">
+                        <label for="bookinfotitle">BOOKING INFORMATION</label>
+                      
+                        <div class="calendar">
+                        
+                          <div class="cid">
+                              <label class="cida">CHECK-IN DATE</label>
+                              <input type="date" id="cndcalendar" name="cndcalendar" required>
+                          </div>
+                        
+                          <div class="cod">
+                              <label class="coda">CHECK-OUT DATE</label>
+                              <input type="date" id="codcalendar" name="codcalendar" required>
+                          </div>
+                        
+                        </div>
+                      
+                        <div class="roomandnum">
+                        
+                            <div class="rooms">
+                              <label class="roomtype">ROOM TYPE</label>
+                                <select name="room" id="roomt">
+                                  <option value="value 0"></option>
+                                  <option value="room1">Luxury Suite Oasis</option>
+                                  <option value="room2">On Skyview Retreat</option>
+                                  <option value="room3">Romantic Hideaway</option>
+                                </select>
+                            </div>
+                          
+                            <div class="numberguest">
+                              <label class="numg"># OF GUESTS</label>
+                              <input type="text" id="numguests" name="numguest">
+                              </div>
+                        </div>
+                      
+                        <div class="not">
+                          <label class="coda">NOTES</label>
+                          <input type="text" id="numguests" name="nots">
+                        </div>
+                      </div>
+                    
+                      <button class="reg" id="regbtn">Register</button>
+                    
+                </div>
+                
+              </form>
+            </div>
+        </div>
+      </div>   
+      
+      <script src="/static/js/SSLform.js"></script>
+
+      <script>
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        // Function to handle scroll event
+        function handleScroll() {
+            var images = document.querySelectorAll('#picture, #about1, #about2');
+    
+            images.forEach(function(image) {
+                if (isElementInViewport(image)) {
+                    image.classList.add('visible');
+                }
+            });
+        }
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    
+        // Call handleScroll initially to check images in view on page load
+        handleScroll();
+      </script>
+  
+</body>
+</html>

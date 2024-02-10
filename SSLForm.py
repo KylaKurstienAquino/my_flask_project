@@ -43,6 +43,10 @@ def index():
 def home():
     return render_template('elechome.html')
 
+@app.route('/about-us')
+def AboutUs():
+    return render_template('AboutUs.html')
+
 # Show Room Case Page
 @app.route('/showRoomCase')
 def showRoomCase():

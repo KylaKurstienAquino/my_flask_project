@@ -130,87 +130,9 @@ body .availabilitybtn{
     margin-bottom: 50px;
     cursor: pointer;
 }
-#AboutUs{
-    width: 100%;
-    height: 100%;
-    align-self: center;
-    margin-top: 10%;
-    padding-bottom: 20px;
-}
-.head{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    margin: 20px;
-    color: black;
-}
-.sub{
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
-    margin: 20px;
-    color: white;
-    text-align: justify;
-}
-.SubtFirst{
-    margin-left: 5%;
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 10px;
-}
-.subtopics1 {
-    padding-left: 10%;
-    flex: 1; /* Adjust flex */
-    margin: 20px;
-}
-.subtopics1 h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    color: black;
-}
-.subtopics1 p{
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
-    color: white;
-}
-.img1{
-    flex: 1;
-    text-align: right;
-}
-.SubtFirst img{
-    width: 500px;
-    padding-right: 20%;
-}
-.SubtSec{
-    margin-left: 7%;
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 10px;
-}
-.subtopics2 {
-    padding-left: 10%;
-    flex: 1; /* Adjust flex */
-}
-.subtopics2 h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
-    color: black;
-}
-.subtopics2 p{
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
-    color: white;
-}
-.img2{
-    flex: 1;
-    text-align: right;
-}
-.SubtSec img{
-    width: 500px;
-    padding-right: 17%;
-}
+
 footer {
-    background-color: #f5f5f5;
+    background-color: black;
     padding: 20px 0;
     height: auto;
 }
@@ -232,6 +154,7 @@ footer {
 .footer-info {
     flex-grow: 1;
     margin-left: 20px;
+    color: white;
 }
 
 .footer-info p {
@@ -239,7 +162,7 @@ footer {
 }
 
 .footer-social a {
-    color: #333;
+    color: white;
     margin-right: 10px;
 }
 .footer-social a:hover {
@@ -250,6 +173,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
+    color: white;
 }
 
 /* SSLForm css*/
@@ -441,16 +365,12 @@ input[type=text], input[type=date], input[type=int], select {
     font-size: 20px;
 }
 /* Define the transition effect for the images */
-#picture,
-#about1,
-#about2 {
+#picture{
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out; /* Transition effect */
 }
 
 /* Define the visible state for the images */
-#picture.visible,
-#about1.visible,
-#about2.visible {
+#picture.visible{
     opacity: 1; /* Make the image visible */
 }
