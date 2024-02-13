@@ -7,11 +7,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("/static/img/bg2.jpg");
+    height: 100vh;
+    background: linear-gradient(to right, #e5e773, #9e9dba);     
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 nav{
     display: flex;
@@ -50,8 +52,7 @@ nav p.OurRooms{
     width: 1100px;
     height: 600px;
     border: none;
-    border-radius: 20px;
-    background-color: rgba(8, 9, 17, 0.554);
+    background: linear-gradient(to right, #abab8c, #9594c5);     
     overflow: hidden;
 }
 
@@ -65,7 +66,7 @@ nav p.OurRooms{
     font-family: 'Meow Script', cursive;
     font-size: 64px;
     text-align: center;
-    color: white;
+    color: black;
 }
 .desc {
     font-family: 'Poppins', cursive;

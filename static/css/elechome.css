@@ -6,7 +6,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #706fb7, #9e9dba);     
+    background: linear-gradient(to right, #e5e773, #9e9dba);     
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -41,7 +41,7 @@ nav ul{
     justify-content: space-between;
 }
 nav a{
-    color: white;
+    color: black;
     font-family: "Poppins",cursive;
     font-weight:bold;
 }

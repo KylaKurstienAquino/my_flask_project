@@ -5,7 +5,7 @@ select {
     position: relative;
     width: calc(100%/ 12*12);
     padding: 0.5%;
-    margin: 1%;
+    /* margin: 1%; */
     display: inline-block;
     border: 1px solid black;
     border-radius: 4px;
@@ -16,10 +16,12 @@ label {
     display: block;
 }
 
-* {
+body {
     padding: 0%;
     margin: 0%;
     font-family: 'Poppins';
+    background: linear-gradient(to right, #e5e773, #9e9dba);     
+
 }
 
 .main {
@@ -31,6 +33,7 @@ label {
 a {
     margin-left: 5%;
     font-size: 200%;
+    background: none;
 }
 h1 {
     text-align: center;
@@ -60,9 +63,7 @@ h1 {
 }
 
 button:hover {
-    color: white;
-    /* Change text color to blue when hovered */
-    text-decoration: underline;
-    /* Add underline when hovered */
-    background-color: gold;
+    color: white; /* Change text color to blue when hovered */
+    text-decoration: underline; /* Add underline when hovered */
+    background-color: plum;
 }
